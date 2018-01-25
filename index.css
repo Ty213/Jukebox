@@ -1,20 +1,28 @@
 .wrapper {
-    border: 2px solid;
-    width: 400px;
-    height: 275px;
+    border: 10px solid rgb(255, 153, 0);
+    width: 500px;
+    height: 475px;
+    background-color: rgb(255, 189, 9);
+    border-top-left-radius: 30%;
+    border-top-right-radius: 30%;
 }
 .jukebox {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
     justify-items: center;
+    
 }
 .jukebox__playing {
-    font-size: 2.5em;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    font-size: 2em;
     font-family: VT323, comic;
-    margin-top: 10px;
+    margin-top: 50px;
     grid-column: 1 / 5;
     grid-row: 1 / 2;
+    border: 10px solid rgb(28, 247, 156);
 }
 .jukebox__controls {
     margin-top: 20px;
@@ -23,6 +31,12 @@
     width: 50px;
     height: 50px;
     grid-row: 2 / 3;
+    background-color: rgb(15, 15, 15);
+    border: 8px solid rgb(252, 10, 10);
+    color: rgb(255, 255, 255);
+}
+.jukebox__controls:hover {
+    background-color: rgb(41, 41, 41);
 }
 .jukebox__playlist {
     font-family: VT323, comic;
@@ -38,5 +52,4 @@
   
 }
 .jukebox__stop {
-    color: red;
 }

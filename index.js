@@ -20,7 +20,7 @@ class JukeBox {
     }
     setSong() {
         audio.src = this.playlist.list[this.curSong].path;
-        songPlaying.innerHTML = this.playlist.list[this.curSong].name + " " + this.playlist.list[this.curSong].artist
+        songPlaying.innerHTML = "&#9733; " + this.playlist.list[this.curSong].name + " " + this.playlist.list[this.curSong].artist + " &#9733;"
     }
     nextSong() {
         if(this.curSong === playlist.list.length - 1){
@@ -69,3 +69,4 @@ playButton.addEventListener("click",jukebox.playSong);
 pauseButton.addEventListener("click",jukebox.pauseSong);
 nextButton.addEventListener("click",update.bind(jukebox));
 stopButton.addEventListener("click",jukebox.stopSong);
+audio.addEventListener('ended',update.bind(jukebox));
