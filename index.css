@@ -14,7 +14,7 @@
     
 }
 .jukebox__playing {
-    padding: 10px;
+    padding: 20px;
     background-color: rgb(255, 255, 255);
     border-radius: 50%;
     font-size: 2em;
@@ -22,10 +22,10 @@
     margin-top: 50px;
     grid-column: 1 / 5;
     grid-row: 1 / 2;
-    border: 10px solid rgb(28, 247, 156);
+    border: 10px double rgb(28, 247, 156);
 }
 .jukebox__controls {
-    margin-top: 20px;
+    margin-top: 30px;
     text-align: center;
     font-size: 2.3em;
     width: 50px;
@@ -34,22 +34,17 @@
     background-color: rgb(15, 15, 15);
     border: 8px solid rgb(252, 10, 10);
     color: rgb(255, 255, 255);
+    border-radius: 50%;
 }
 .jukebox__controls:hover {
     background-color: rgb(41, 41, 41);
 }
+li {
+    list-style: none;
+    background-color: white;
+    font-size: 1.5em;
+}
 .jukebox__playlist {
     font-family: VT323, comic;
     grid-row: 3 / 4;
-}
-.jukebox__play {
-   
-}
-.jukebox__pause {
-   
-}
-.jukebox__next {
-  
-}
-.jukebox__stop {
 }

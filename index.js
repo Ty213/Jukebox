@@ -6,6 +6,7 @@ var pauseButton = document.querySelector('.jukebox__pause');
 var nextButton = document.querySelector('.jukebox__next');
 var stopButton = document.querySelector('.jukebox__stop');
 
+
 class JukeBox {
     constructor(playlist){
         this.playlist = playlist;
@@ -20,7 +21,8 @@ class JukeBox {
     }
     setSong() {
         audio.src = this.playlist.list[this.curSong].path;
-        songPlaying.innerHTML = "&#9733; " + this.playlist.list[this.curSong].name + " " + this.playlist.list[this.curSong].artist + " &#9733;"
+        songPlaying.innerHTML = "&#9733; " + this.playlist.list[this.curSong].name + " " +
+         this.playlist.list[this.curSong].artist + " &#9733;"
     }
     nextSong() {
         if(this.curSong === playlist.list.length - 1){
@@ -58,11 +60,18 @@ var playlist = new PlayList(songs);
 var jukebox = new JukeBox(playlist);
 jukebox.setSong();
 audio.load();
+loadPlaylist(jukebox);
 
 function update(jukebox) {
     this.nextSong();
     this.setSong();
     audio.play();
+}
+
+function loadPlaylist(jukebox) {
+    //to be used to load playlist...
+    console.log(jukebox);
+
 }
 
 playButton.addEventListener("click",jukebox.playSong);
