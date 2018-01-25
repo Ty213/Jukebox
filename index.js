@@ -1,8 +1,10 @@
-var currentSong = document.querySelector('.currentSong__jukebox');
-var audio = document.querySelector('.audio__jukebox');
+var currentSong = document.querySelector('.jukebox__currentSong');
+var songPlaying = document.querySelector('.jukebox__playing');
+var audio = document.querySelector('.jukebox__audio');
 var playButton = document.querySelector('.jukebox__play');
 var pauseButton = document.querySelector('.jukebox__pause');
 var nextButton = document.querySelector('.jukebox__next');
+var stopButton = document.querySelector('.jukebox__stop');
 
 class JukeBox {
     constructor(playlist){
@@ -18,6 +20,7 @@ class JukeBox {
     }
     setSong() {
         audio.src = this.playlist.list[this.curSong].path;
+        songPlaying.innerHTML = this.playlist.list[this.curSong].name + " " + this.playlist.list[this.curSong].artist
     }
     nextSong() {
         if(this.curSong === playlist.list.length - 1){
@@ -26,6 +29,9 @@ class JukeBox {
             this.curSong++;
         }
         
+    }
+    stopSong() {
+        audio.load();
     }
 }
 class PlayList {
@@ -62,3 +68,4 @@ function update(jukebox) {
 playButton.addEventListener("click",jukebox.playSong);
 pauseButton.addEventListener("click",jukebox.pauseSong);
 nextButton.addEventListener("click",update.bind(jukebox));
+stopButton.addEventListener("click",jukebox.stopSong);

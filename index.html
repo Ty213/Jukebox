@@ -3,19 +3,30 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="index.css">
 	<title></title>
 </head>
 <body>
 	<div class='wrapper'>
 		<div class='jukebox'>
-			<audio class='audio__jukebox'>
-				<source class='currentSong__jukebox' src="" type="audio/mp3">
+			<audio class='jukebox__audio'>
+				<source class='jukebox__currentSong' src="" type="audio/mp3">
 			</audio>
 			<div class='jukebox__playing'>Current song playing.</div>
-			<div class='jukebox__play'>play</div>
-			<div class='jukebox__pause'>pause</div>
-			<div class='jukebox__next'>next</div>
+			<div class='jukebox__play jukebox__controls'>&#9655;</div>
+			<div class='jukebox__pause jukebox__controls'>| |</div>
+			<div class='jukebox__next jukebox__controls'>>></div>
+			<div class='jukebox__stop jukebox__controls'>&#9633;</div>
+			<!-- <div class='jukebox__playlist'>
+				<ul>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+				</ul>
+			</div> -->
 		</div>
 	</div>
 	<script type="text/javascript" src='index.js'></script>
